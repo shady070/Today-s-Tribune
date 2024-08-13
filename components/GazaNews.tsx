@@ -27,7 +27,7 @@ const GazaNews = () => {
     <div className='flex flex-col items-center justify-center mt-[20px] md:mt-[45px] md:pb-[100px] pb-[40px]'>
       <div className='flex gap-[20px] items-center pb-[20px]'>
         <h1 className='md:text-[96px] text-[30px] pb-[10px]'>War in Gaza</h1>
-        <img className='w-[80px] md:w-[120px] md:h-[60px]' src="/Palestine.PNG" alt="Palestine Flag" />
+        <img className='w-[80px] md:w-[120px] md:h-[60px]' src="./Palestine.png" alt="Palestine Flag" />
       </div>
       {loading ? (
         <div className='flex flex-wrap justify-center gap-[20px]'>
