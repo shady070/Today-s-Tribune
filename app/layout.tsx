@@ -6,11 +6,17 @@ import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 import NavBar from "@/components/NavBar";
 import Head from 'next/head';
+import { Metadata } from "next";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
+export const metadata: Metadata = {
+  title: "Today's Tribune",
+  description: "Created By ByteBrush",
+};
 
 const fontGeorgian = FontGeorgian({
   subsets: ["latin"],
@@ -20,12 +26,6 @@ const fontGeorgian = FontGeorgian({
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head>
-        <title>Today's Tribune</title>
-        <meta name="description" content="This is a News Website Created by Hassan Malik." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <body
         className={cn(
           "min-h-screen bg-background antialiased",
