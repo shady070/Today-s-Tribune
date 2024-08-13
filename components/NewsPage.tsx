@@ -7,7 +7,7 @@ const NewsPage = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [headline, setHeadline] = useState<string>('');
   const [description, setDescription] = useState<string>('');
-  const [selectedUrl, setSelectedUrl] = useState<string>(''); // Added this state
+  const [selectedUrl, setSelectedUrl] = useState<string>(''); 
 
   const handleArticleSelect = (imageUrl: string | null, headline: string, description: string, url: string) => {
     setSelectedImage(imageUrl);
