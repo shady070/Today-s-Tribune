@@ -5,8 +5,8 @@ export async function GET() {
   try {
     const response = await axios.get('https://newsapi.org/v2/everything', {
       params: {
-        q: 'Gaza', // Search query for news about Gaza
-        apiKey: process.env.NEWS_API_KEY, // Ensure this is set in your environment variables
+        q: 'Gaza', 
+        apiKey: process.env.NEWS_API_KEY,
       },
     });
 

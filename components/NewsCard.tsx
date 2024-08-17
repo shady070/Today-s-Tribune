@@ -2,14 +2,14 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
-import { Skeleton } from '@/components/ui/skeleton'; // Import the Skeleton component
+import { Skeleton } from '@/components/ui/skeleton'; 
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"; // Ensure this path is correct
+} from "@/components/ui/carousel";
 
 type Article = {
   source: { id: string | null; name: string };
@@ -42,7 +42,6 @@ const BusinessNewsComponent = () => {
 
   return (
     <div className='mt-[45px] lg:mt-[310px] flex flex-wrap gap-[10px] md:gap-[52px] justify-center items-center'>
-      {/* Carousel for mobile view */}
       <div className='md:hidden'>
         <Carousel className='w-[300px]'>
           <CarouselContent>

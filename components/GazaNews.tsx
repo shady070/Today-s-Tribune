@@ -2,17 +2,17 @@
 import React, { useEffect, useState } from 'react';
 import GazaNewsBox from './GazaNewsBox';
 import axios from 'axios';
-import { Skeleton } from '@/components/ui/skeleton'; // Import the Skeleton component
+import { Skeleton } from '@/components/ui/skeleton'; 
 
 const GazaNews = () => {
-  const [news, setNews] = useState<any[]>([]); // State to hold news articles
-  const [loading, setLoading] = useState<boolean>(true); // State to handle loading
+  const [news, setNews] = useState<any[]>([]); 
+  const [loading, setLoading] = useState<boolean>(true); 
 
   useEffect(() => {
     const fetchNews = async () => {
       try {
         const response = await axios.get('/api/gaza-news');
-        setNews(response.data.articles.slice(0, 6)); // Limit to the first 6 articles
+        setNews(response.data.articles.slice(0, 6)); 
       } catch (error) {
         console.error('Error fetching Gaza news:', error);
       } finally {

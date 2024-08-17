@@ -27,7 +27,6 @@ const TopNewsBar = ({ onArticleSelect }: TopNewsBarProps) => {
         const response = await axios.get('/api/getNews');
         const articles = response.data.articles.slice(0, 4); 
         setNews(articles);
-        // Select the first article by default after data is loaded
         if (articles.length > 0) {
           onArticleSelect(articles[0].urlToImage, articles[0].title, articles[0].description, articles[0].url);
         }
